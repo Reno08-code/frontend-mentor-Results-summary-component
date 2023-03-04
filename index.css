@@ -1,0 +1,224 @@
+:root {
+  /*### Primary*/
+
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /*## Gradients*/
+
+  --Light-slate-blue/*(background)*/: hsl(252, 100%, 67%);
+  --Light-royal-blue/*(background)*/: hsl(241, 81%, 54%);
+
+  --Violet-blue/*(circle)*/: hsla(256, 72%, 46%, 1);
+  --Persian-blue/*(circle)*/: hsla(241, 72%, 46%, 0);
+
+  /*### Neutral*/
+
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Darkgray-blue: hsl(224, 30%, 27%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  background-color: aliceblue;
+  min-height: 100vh;
+}
+h1 {
+  font-weight: 700;
+}
+.container {
+  margin: 0 auto;
+  max-width: 767px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  width: 85%;
+
+  max-width: 760px;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4rem;
+  box-shadow: 0 0 10px 10px rgba(164, 212, 241, 0.2);
+}
+
+.wrapper .result {
+  background-image: linear-gradient(
+    45deg,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
+  border-radius: 1rem;
+  padding: 1.5rem 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.wrapper .result h1 {
+  color: var(--Light-lavender);
+
+  font-size: inherit;
+  margin-bottom: 2rem;
+}
+.wrapper .result .result_score {
+  margin-bottom: 1rem;
+  width: 150px;/*给了一个固定的值，他就不会屏幕大小而被挤压*/
+  height: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.wrapper .result .result_score span {
+  font-weight: 800;
+  color: hsl(0, 0%, 100%);
+  font-size: 40px;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+.result_score p {
+  color: var(--Light-lavender);
+  font-size: 12px;
+}
+
+.result p:nth-child(3) {
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+.result p:nth-child(4) {
+  color: var(--Light-lavender);
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.summary h1 {
+  font-size: inherit;
+  margin-top: 1.5rem;
+}
+.summary {
+  background-color: var(--Persian-blue);
+}
+.summary .summary_details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  padding-right:1.4rem ;
+}
+.summary .summary_details .detail {
+  margin: 0.5rem 0;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: 14px;
+}
+.score {
+  font-weight: 700;
+  color: var(--Darkgray-blue);
+}
+.total {
+  color: var(--Darkgray-blue);
+}
+.summary .summary_details .reaction {
+  background-color: hsl(0, 100%, 95%);
+}
+.summary .summary_details .memory {
+  background-color: hsl(39, 100%, 95%);
+}
+.summary .summary_details .verbal {
+  background-color: hsl(166, 100%, 95%);
+}
+.summary .summary_details .visual {
+  background-color: hsl(234, 85%, 95%);
+}
+
+.detail:nth-child(1) {
+  color: hsl(0, 100%, 67%);
+}
+.detail:nth-child(2) {
+  color: hsl(39, 100%, 56%);;
+}
+
+.detail:nth-child(3) {
+  color: hsl(166, 100%, 37%);
+}
+.detail:nth-child(4) {
+  color: hsl(234, 85%, 45%);
+}
+
+button {
+  margin-top: 1.5rem;
+  width: 100%;
+  color:var(--Pale-blue) ;
+  background-color: var(--Darkgray-blue);
+  border-radius: 30px;
+  padding:0.8rem 3rem;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  box-shadow:0px 4px 4px 4px var(--Pale-blue);
+}
+button:hover{
+  background-image: linear-gradient(  
+  hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+button:active{
+  transform: translate(4px,4px);
+}
+
+
+@media screen and (max-width:768px){
+ 
+  .wrapper{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%;
+    width:50%;
+   
+  }
+  .summary{
+    margin:0 1rem;
+  }
+
+}
+
